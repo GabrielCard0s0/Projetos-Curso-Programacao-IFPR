@@ -1,6 +1,6 @@
-def Obter_Lista(prompt):
+def Obter_Lista(texto):
     while True:
-        entrada = input(prompt)
+        entrada = input(texto)
         try:
             lista = [float(num) for num in entrada.split()]
             return lista
