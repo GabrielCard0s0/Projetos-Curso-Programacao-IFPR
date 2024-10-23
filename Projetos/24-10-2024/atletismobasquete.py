@@ -13,10 +13,11 @@ def Digitar(texto, atraso=0.05):
     for letra in texto:
         print(letra, end='', flush=True)
         time.sleep(atraso)
+    
 
-def Verificar_Interseccao():
-    intersecao = set(atletismo) and set(basquete)
-    return list(intersecao)
+def Verificar():
+    verificar = set(atletismo) and set(basquete)
+    return list(verificar)
 
 while True:
     options = [
@@ -57,7 +58,7 @@ while True:
                     break
 
         elif escolha == 2:
-            estudantes_simultaneos = Verificar_Interseccao()
+            estudantes_simultaneos = Verificar()
             if estudantes_simultaneos:
                 Digitar('Estudantes que praticam ambas as atividades:\n')
                 for estudante in estudantes_simultaneos:
