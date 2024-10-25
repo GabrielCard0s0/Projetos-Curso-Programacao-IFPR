@@ -86,4 +86,4 @@ def Menu_Principal():
             time.sleep(1)
 
 # Chama a função principal para iniciar o programa
-Menu_Principal()
+Menu_Principal() 
