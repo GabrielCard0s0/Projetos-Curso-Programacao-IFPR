@@ -4,7 +4,7 @@ Este repositório contém uma série de projetos e exercícios desenvolvidos ao 
 
 ## Estrutura de Pastas
 
-Abaixo está a estrutura organizada por datas, onde cada pasta contém os exercícios e projetos abordados naquele dia.
+Elas está a estrutura organizada por datas, onde cada pasta contém os exercícios e projetos abordados naquele dia.
 
 ### As Pastas de Projetos contém:
 
