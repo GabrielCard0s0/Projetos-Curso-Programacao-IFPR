@@ -73,6 +73,9 @@ def game_loop():
                 pygame.quit()
                 sys.exit()
             if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    pygame.quit()
+                    sys.exit()
                 if event.key == pygame.K_SPACE and on_ground:
                     trex_velocity_y = JUMP_VELOCITY
                     on_ground = False
@@ -105,6 +108,8 @@ def game_loop():
         # Desenhando a pontuação
         score_text = font.render(f"Pontos: {score}", True, BLACK)
         screen.blit(score_text, (10, 10))
+        escape_text = font.render(f"Press escape to exit", True, BLACK)
+        screen.blit(escape_text, (600,10))
 
         # Verificando colisão com o obstáculo
         if (trex_x + 40 > obstacle_x and trex_x < obstacle_x + 20) and (trex_y + 40 > obstacle_y):
@@ -123,8 +128,7 @@ def game_over(score):
     screen.blit(game_over_text, (SCREEN_WIDTH // 4, SCREEN_HEIGHT // 2))
     pygame.display.update()
     pygame.time.wait(3000)
-    pygame.quit()
-    sys.exit()
+    game_loop()
 
 # Iniciando o jogo
 game_loop()
